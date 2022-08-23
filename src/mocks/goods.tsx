@@ -71,4 +71,39 @@ export const goods: GoodsListType = [
         price: 10000,
         description: 'Медный светильник Конг'
     },
+    {
+        id: 10,
+        sale: 20,
+        images: ['img/product-photo-11@1x.webp 1x', 'img/product-photo-11@2x.webp 2x'],
+        price: 3000,
+        description: 'Деревянный табурет Роган'
+    },
+    {
+        id: 11,
+        sale: 0,
+        images: ['img/product-photo-12@1x.webp 1x', 'img/product-photo-12@2x.webp 2x'],
+        price: 115000,
+        description: 'Обеденный комплект для кухни Вууд'
+    },
+    {
+        id: 12,
+        sale: 40,
+        images: ['img/product-photo-13@1x.webp 1x', 'img/product-photo-13@2x.webp 2x'],
+        price: 54000,
+        description: 'Мягкое кресло Девил'
+    },
+    {
+        id: 13,
+        sale: 0,
+        images: ['img/product-photo-14@1x.webp 1x', 'img/product-photo-14@2x.webp 2x'],
+        price: 18000,
+        description: 'Журнальный столик Ален'
+    },
+    {
+        id: 14,
+        sale: 0,
+        images: ['img/product-photo-15@1x.webp 1x', 'img/product-photo-15@2x.webp 2x'],
+        price: 86000,
+        description: 'Обеденный комплект для кухни Денвер'
+    },
 ];

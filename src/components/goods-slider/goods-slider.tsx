@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import {GoodsListType} from '../../types/goods-list-type';
 import {Good} from '../good/good';
-import {GOOD_TYPE} from '../const';
+import {ELEMENTS_AMOUNT_IN_SLIDE, GOOD_TYPE} from '../const';
 import {GoodType} from '../../types/good-type';
 import {GoodSale} from '../good-sale/good-sale';
 import {PrevArrow} from '../prev-arrow/prev-arrow';
@@ -24,8 +24,8 @@ export const GoodsSlider = ({goods}: GoodsSliderProps): JSX.Element => {
     const settings = {
         infinite: true,
         speed: 500,
-        slidesToShow: 5,
-        slidesToScroll: 5,
+        slidesToShow: ELEMENTS_AMOUNT_IN_SLIDE,
+        slidesToScroll: ELEMENTS_AMOUNT_IN_SLIDE,
         prevArrow: <PrevArrow/>,
         nextArrow: <NextArrow/>
     };
