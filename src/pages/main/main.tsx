@@ -1,6 +1,6 @@
 import {Header} from '../../components/header/header';
 import {Banner} from '../../components/banner/banner';
-import {Goods} from '../../components/goods/goods';
+import {GoodsSlider} from '../../components/goods-slider/goods-slider';
 import {GoodsListType} from '../../types/goods-list-type';
 
 type MainProps = {
@@ -16,7 +16,7 @@ export const Main = ({goods}: MainProps): JSX.Element => {
             Клубок - главная страница
           </h1>
           <Banner />
-          <Goods goods={goods}/>
+          <GoodsSlider goods={goods}/>
         </main>
       </>
   );

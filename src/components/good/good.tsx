@@ -8,7 +8,7 @@ type GoodProps = GoodType & {
 
 export const Good = ({sale, images, description, price, className}: GoodProps) => {
   return (
-      <li className="goods__item slider__item">
+      <div className="goods__item slider__item">
         <a className={`product ${className}`} href="#">
           {sale ? <Sale sale={sale}/> : null}
           <div className="product__image">
@@ -24,6 +24,6 @@ export const Good = ({sale, images, description, price, className}: GoodProps) =
             <Price price={price} sale={sale}/>
           </div>
         </a>
-      </li>
+      </div>
   );
 }

@@ -18,8 +18,6 @@ const getGoodByType = (type: string, good: GoodType) => {
 };
 
 export const GoodsList = ({goods}: GoodsListProps): JSX.Element => {
-
-
   return (
       <ul className="goods__list slider__list">
           {goods.map(good => getGoodByType(good.sale ? GOOD_TYPE.SALE: GOOD_TYPE.DEFAULT, good))}
