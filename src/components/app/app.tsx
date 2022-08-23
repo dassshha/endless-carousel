@@ -1,8 +1,9 @@
 import React from 'react';
+import {Main} from '../../pages/main/main';
 
 function App() {
   return (
-    <h1>app</h1>
+    <Main />
   );
 }
 
