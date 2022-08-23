@@ -1,3 +1,3 @@
-import {GoodType} from './good-type';
+import { GoodType } from './good-type'
 
-export type GoodsListType = GoodType[];
+export type GoodsListType = GoodType[]

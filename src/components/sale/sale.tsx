@@ -1,11 +1,11 @@
 type SaleProps = {
-    sale: number
-};
+  sale: number
+}
 
-export const Sale = ({sale}: SaleProps): JSX.Element => {
+export const Sale = ({ sale }: SaleProps): JSX.Element => {
   return (
-      <b className="product__sale-label">
-          −<span className="product__sale-amount">{sale}</span>%
-      </b>
-  );
+    <b className='product__sale-label'>
+      −<span className='product__sale-amount'>{sale}</span>%
+    </b>
+  )
 }

@@ -1,10 +1,8 @@
-import {Good} from '../good/good';
-import {GoodType} from '../../types/good-type';
+import { Good } from '../good/good'
+import { GoodType } from '../../types/good-type'
 
-type GoodSaleProps = GoodType;
+type GoodSaleProps = GoodType
 
 export const GoodSale = (props: GoodSaleProps): JSX.Element => {
-    return (
-        <Good {...props} className='product--sale'/>
-    );
-};
+  return <Good {...props} className='product--sale' />
+}
