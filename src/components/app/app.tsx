@@ -1,9 +1,15 @@
 import React from 'react';
 import {Main} from '../../pages/main/main';
+import {GoodsListType} from '../../types/goods-list-type';
+import {goods} from '../../mocks/goods';
+
+type AppProps = {
+  goods: GoodsListType
+};
 
 function App() {
   return (
-    <Main />
+    <Main goods={goods}/>
   );
 }
 
