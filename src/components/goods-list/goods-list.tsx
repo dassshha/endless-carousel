@@ -1,36 +1,27 @@
 import {GoodsListType} from '../../types/goods-list-type';
+import {GoodType} from '../../types/good-type';
+import {GoodSale} from '../good-sale/good-sale';
+import {Good} from '../good/good';
 
 type GoodsListProps = {
     goods: GoodsListType
 };
 
+const getGoodByType = (type: string, good: GoodType) => {
+    switch (type) {
+        case 'SALE':
+            return <GoodSale {...good}/>
+        default:
+            return <Good {...good}/>
+    }
+};
+
 export const GoodsList = ({goods}: GoodsListProps): JSX.Element => {
 
-    const formatPrice = (price: number) => new Intl.NumberFormat('ru-RU').format(price);
 
   return (
       <ul className="goods__list slider__list">
-          {goods.map(good =>
-              <li className="goods__item slider__item">
-                  <a className="product" href="#">
-                      <div className="product__image">
-                          <picture>
-                              <source type="image/webp" srcSet={good.images.join(', ')} />
-                              <img src="https://via.placeholder.com/150
-
-                          C/O https://placeholder.com/" width={214} height={248} alt={good.description} srcSet={good.images.join(', ')} />
-                          </picture>
-                      </div>
-                      <div className="product__description">
-                          <h3 className="product__heading">
-                              {good.description}
-                          </h3>
-                          <b className="product__price">
-                              <span className="product__price-value">{formatPrice(good.price)}</span><i className="rouble">i</i>
-                          </b>
-                      </div>
-                  </a>
-              </li>)}
+          {goods.map(good => getGoodByType(good.sale ? 'SALE': 'NOT_SALE', good))}
           {/*<li className="goods__item slider__item">*/}
           {/*    <a className="product" href="#">*/}
           {/*        <div className="product__image">*/}
